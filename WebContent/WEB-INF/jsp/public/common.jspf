@@ -1,0 +1,39 @@
+<%@ page language="java" import="java.util.*" pageEncoding="utf-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"%>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script language="javascript" src="${pageContext.request.contextPath}/script/jquery.js"></script>
+<script language="javascript" src="${pageContext.request.contextPath}/script/jquery_validate/jquery.metadata.js"></script>
+<script language="javascript" src="${pageContext.request.contextPath}/script/jquery_validate/jquery.validate.js"></script>
+
+<script language="javascript" src="${pageContext.request.contextPath}/script/pageCommon.js" charset="utf-8"></script>
+<script language="javascript" src="${pageContext.request.contextPath}/script/PageUtils.js" charset="utf-8"></script>
+<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/style/blue/pageCommon.css" />
+
+<script type="text/javascript">
+
+jQuery.extend(jQuery.validator.messages, {
+    required: "Please Fill This Out",
+    remote: "Not Valid",
+    email: "Please Enter Valid Email",
+    url: "Please Enter Correct Url",
+    date: "Please Enter Valid Date",
+    dateISO: "Please Enter Valid Date (ISO).",
+    number: "Pleas Enter Valid Number",
+    digits: "Must Be Number",
+    creditcard: "Pleas Enter Valid Card Number",
+    equalTo: "Please Enter Again",
+    accept: "Pleas Enter The Text Your See",
+    maxlength: jQuery.validator.format("0 Is Maximum Allowed"),
+    minlength: jQuery.validator.format("0 Is Minimum Allowed"),
+    rangelength: jQuery.validator.format("Valid Value Is Between {0} and {1}"),
+    range: jQuery.validator.format("Please Enter Value Between {0} and {1} "),
+    max: jQuery.validator.format("0 Is Maximum Allowed"),
+    min: jQuery.validator.format("0 Is Minimum Allowed")
+});
+
+
+	$(function(){
+		$("form").validate();
+	});
+</script>
+
